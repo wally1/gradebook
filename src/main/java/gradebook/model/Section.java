@@ -5,12 +5,11 @@ import java.text.DecimalFormat;
 
 /**
  * Fill
- * 
- * 
+ *
+ *
  */
 
 public class Section extends Class {
-	
     private String id;
     private Class superClass;
     private double avgScore;
@@ -22,12 +21,10 @@ public class Section extends Class {
         this.id = id;
         this.superClass = superClass;
     }
-    
     public double avgScore(GradingScheme gradingScheme) {
         double sum = 0;
-        for(Student student : students)
-        {
-        	sum+=student.calculateScore(gradingScheme);
+        for (Student student : students) {
+             sum += student.calculateScore(gradingScheme);
         }
         avgScore = sum / students.size();
         return Double.parseDouble(new DecimalFormat("#.00").format(avgScore));

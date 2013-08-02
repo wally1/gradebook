@@ -1,7 +1,5 @@
 package gradebook.model;
 
-import gradebook.model.GradebookCategory;
-
 /**
  * Fill
  *
@@ -19,19 +17,19 @@ public class GradebookItem {
         this.score = score;
     }
 
-    public GradebookItem(String gName, GradebookCategory aGradebookCategory, //edit this too
-             int aScore) {
-        name = gName;
-        gradebookCategory = aGradebookCategory;
-        score = (double) aScore;
+    public GradebookItem(String name, GradebookCategory gradebookCategory,
+             int score) {
+        this.name = name;
+        this.gradebookCategory = gradebookCategory;
+        this.score = (double) score;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String gName) {
-        name = gName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public GradebookCategory getGradebookCategory() {
@@ -46,7 +44,7 @@ public class GradebookItem {
         return score;
     }
 
-    public void setScore(double aScore) {
-        score = aScore;
+    public void setScore(double score) {
+        this.score = score;
     }
 }

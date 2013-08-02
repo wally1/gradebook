@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.text.DecimalFormat;
 /**
  * Fill
- * 
+ *
  */
 
 public class GradingSystem implements GradingScheme {
@@ -24,22 +24,18 @@ public class GradingSystem implements GradingScheme {
         double categoryScore;
         double categoryWeight;
         GradebookCategory currentCategory;
-        
-        for(GradebookItem currentItem : grades)
-        {
+        for (GradebookItem currentItem : grades) {
             currentCategory = currentItem.getGradebookCategory();
-            if (!categoriesCalculated.contains(currentCategory)) 
-            {
+            if (!categoriesCalculated.contains(currentCategory)) {
                 categoryScore = getCategoryAverage(currentCategory);
                 categoryWeight = currentCategory.getPercentWeight();
                 score += (categoryScore * categoryWeight);
                 categoriesCalculated.add(currentCategory);
             }
         }
-        
         finalScore =
             Double.parseDouble(new DecimalFormat("#.##").format(score));
-        return finalScore;
+            return finalScore;
     }
 
     public String getLetterGrade(double score) {
@@ -62,14 +58,12 @@ public class GradingSystem implements GradingScheme {
         double runningTotal = 0;
         double counter = 0;
 
-        for(GradebookItem currentItem : grades)
-        {
+        for (GradebookItem currentItem : grades) {
             if (currentItem.getGradebookCategory() == currentCategory) {
                 runningTotal += currentItem.getScore();
                 counter++;
-            }	
+            }
         }
-        
         return runningTotal / counter;
     }
 }

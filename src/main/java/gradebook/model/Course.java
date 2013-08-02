@@ -17,7 +17,6 @@ public class Course {
     private boolean score = false;
     private String letterGrade;
     private double avgScore;
-    
 
     public Course(String subject, int courseID, String courseName) {
         this.subject = subject;
@@ -79,7 +78,8 @@ public class Course {
             sum += classes.get(i).avgScore(gradingScheme);
         }
         avgScore = sum / classes.size();
-        avgScore = Double.parseDouble(new DecimalFormat("#.00").format(avgScore));
+        avgScore = Double.parseDouble(
+        new DecimalFormat("#.00").format(avgScore));
         score = true;
         return avgScore;
     }

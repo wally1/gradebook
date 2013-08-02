@@ -4,12 +4,13 @@ import java.util.ArrayList;
 
 /**
  * fill
- * 
- * 
+ *
+ *
  */
 public class Student {
     private String name;
-    private ArrayList<GradebookItem> gradebookItems = new ArrayList<GradebookItem>();
+    private ArrayList<GradebookItem> gradebookItems =
+    new ArrayList<GradebookItem>();
     private double score;
     private String letterGrade;
     private boolean scoreCalculated = false;

@@ -4,11 +4,10 @@ import java.util.ArrayList;
 
 /**
  * Fill
- * 
+ *
  */
 
 public interface GradingScheme {
-	
     double A = 90.0;
     double B = 80.0;
     double C = 70.0;
@@ -20,6 +19,5 @@ public interface GradingScheme {
     //String reportScores();
     //String reportLetterGrades();
     String getLetterGrade(double score);
-    
     //remove abstract methods
 }
